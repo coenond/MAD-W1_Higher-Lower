@@ -108,7 +108,7 @@ class MainActivity : AppCompatActivity() {
      */
     private fun addThrow() {
         println("add throw: " + dice)
-        throws.add(dice)
+        throws.add(0, dice)
         rv_results.adapter = ListAdapter(throws, this)
     }
 
