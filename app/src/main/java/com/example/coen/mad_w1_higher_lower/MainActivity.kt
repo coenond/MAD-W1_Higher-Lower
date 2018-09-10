@@ -36,7 +36,8 @@ class MainActivity : AppCompatActivity() {
      * Throw the dice and set the correct image resource.
      */
     private fun throwDice(): Int {
-        dice = Random().nextInt(7 - 1) + 1
+        val newThrow = Random().nextInt(7-1)+1
+        dice = if (newThrow != dice) newThrow else throwDice()
         iv_dice.setImageResource(dices[dice-1])
         addThrow()
         return dice
