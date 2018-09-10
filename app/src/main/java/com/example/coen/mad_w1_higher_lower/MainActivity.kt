@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         // Throuw dice to start the first round
         throwDice()
-    }a
+    }
 
     /**
      * Throw the dice and set the correct image resource.
