@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         // Throuw dice to start the first round
         throwDice()
-    }
+    }a
 
     /**
      * Throw the dice and set the correct image resource.
@@ -108,7 +108,6 @@ class MainActivity : AppCompatActivity() {
      * Add new throw to the list.
      */
     private fun addThrow() {
-        println("add throw: " + dice)
         throws.add(0, dice)
         rv_results.adapter = ListAdapter(throws, this)
     }

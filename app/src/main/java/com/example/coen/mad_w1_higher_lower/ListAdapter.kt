@@ -14,7 +14,6 @@ import kotlinx.android.synthetic.main.list_item.view.*
 class ListAdapter(val items : ArrayList<Int>, val context: Context) : RecyclerView.Adapter<ViewHolder>() {
 
     override fun getItemCount(): Int {
-        println("size: " + items.size)
         return items.size
     }
 
@@ -23,7 +22,6 @@ class ListAdapter(val items : ArrayList<Int>, val context: Context) : RecyclerVi
     }
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
-        println(items.get(position))
         holder?.tvInfo?.text = "Throw is " + items.get(position)
     }
 }
