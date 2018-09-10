@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.coen.mad_w1_higher_lower.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/score"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_highscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/highscore"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_score"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_results"
+        android:layout_width="325dp"
+        android:layout_height="211dp"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_highscore"
+        app:reverseLayout="true"
+        app:stackFromEnd="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_higher"
+        android:layout_width="42dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="76dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_results"
+        app:srcCompat="@android:drawable/arrow_up_float" />
+
+    <ImageView
+        android:id="@+id/iv_dice"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="dice"
+        app:layout_constraintEnd_toStartOf="@+id/fab_higher"
+        app:layout_constraintStart_toEndOf="@+id/fab_lower"
+        app:layout_constraintTop_toBottomOf="@+id/rv_results" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_lower"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="76dp"
+        android:clickable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_results"
+        app:srcCompat="@android:drawable/arrow_down_float" />
+
+</android.support.constraint.ConstraintLayout>
